@@ -1,0 +1,12 @@
+body {
+    background-image: linear-gradient(red, yellow);
+    background-attachment: fixed ;
+}
+
+.title {
+    text-align: center;
+}
+
+.projects {
+    margin: 20px 30px;
+}
