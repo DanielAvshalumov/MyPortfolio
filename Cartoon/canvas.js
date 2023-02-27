@@ -5,8 +5,25 @@ ctx.fillStyle = "lightblue"
 ctx.fillRect(0,0,1000,500);
 ctx.fillStyle = "green";
 ctx.fillRect(0,400,1000,100);
+// writes the caption
+ctx.fillStyle = "darkorange";
+ctx.font = "30px Arial";
+ctx.fillText("It's Always Sunny in Philadelphia",canvas.width/2-100,canvas.height/2-200);
 drawSun();
 drawHouse();
+drawFence();
+drawClouds();
+
+function drawClouds() {
+    for(let i = 0; i < canvas.width; i += 200) {
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.ellipse(i, 150, 50, 30, Math.PI * 0.1, 0, Math.PI*2);
+        ctx.fill();
+        ctx.ellipse(i-20, 150, 50, 30, Math.PI * 0.15, 0, Math.PI*.5, true);
+        ctx.fill();
+    }
+}
 
 function drawSun(){
     ctx.beginPath();
@@ -63,4 +80,12 @@ function drawHouse() {
     ctx.moveTo(940,356);
     ctx.lineTo(949,370);
     ctx.stroke();
+}
+
+function drawFence() {
+    for(let i = 0; i < 700; i += 70) {
+        ctx.fillStyle = "#BCA880"
+        ctx.fillRect(i,350,20,100);
+        ctx.fillRect(i,390,70,20);
+    }
 }
