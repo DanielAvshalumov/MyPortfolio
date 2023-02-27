@@ -1,1 +1,0 @@
-# Daniel Avshalumov's Profile
