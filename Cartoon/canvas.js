@@ -9,6 +9,7 @@ ctx.fillRect(0,400,1000,100);
 ctx.fillStyle = "darkorange";
 ctx.font = "30px Arial";
 ctx.fillText("It's Always Sunny in Philadelphia",canvas.width/2-100,canvas.height/2-200);
+// calls methods that draws what the name entails
 drawSun();
 drawHouse();
 drawFence();
