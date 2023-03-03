@@ -8,5 +8,6 @@ body {
 }
 
 .projects {
-    margin: 20px 30px;
+    display: flex;
+    justify-content: center;
 }
