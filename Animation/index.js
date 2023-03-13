@@ -40,6 +40,7 @@ function move() {
 
 async function explode() {
     let explosion = new Image();
+    let scaredMonke = new Image();
     explosion.src = "./explosion.png";
     const jsonFetch = await fetch("./explosion.json").then(res => res.json());
     let data = jsonFetch.frames;
