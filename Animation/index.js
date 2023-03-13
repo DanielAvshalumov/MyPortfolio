@@ -9,7 +9,8 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
 
 function init() {
-    move();
+    let x = move();
+    
 }
 let frame = 0;
 let frameCount = 0;
@@ -22,8 +23,9 @@ function move() {
     }
     frameCount = 0;
     const yPos = 90;
-    if(x === 150) {
-        animateBubble(x);
+    if(x > 150) {
+        explode();
+        return x;
     } else {
     ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.drawImage(background,0,0);
@@ -35,18 +37,45 @@ function move() {
     }
     window.requestAnimationFrame(move);
 }
-function animateBubble(xPos) {
-    let idleMonke = new Image();
-    idleMonke.src = "./monke-idle.png";
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.drawImage(background,0,0);
-    ctx.drawImage(idleMonke,0,0,75,77,xPos,300,75,77);
-    let xFrameCount = 0;
-    let xFrame = 0;
+
+async function explode() {
     let explosion = new Image();
     explosion.src = "./explosion.png";
-    explosions();
-    function explosions() {
-        ctx.drawImage(explosion,0,0,98,96,0,0,98,95);
+    const jsonFetch = await fetch("./explosion.json").then(res => res.json());
+    let data = jsonFetch.frames;
+    console.log(data);
+    let frameCount = 0;
+    let frame = data.map(item => item.frame.y);
+    let index = 0;
+    helper();
+        
+        
+    
+    
+    function helper() {
+        frameCount++
+        if(frameCount < 10) {
+            window.requestAnimationFrame(helper);
+            return;
+        }
+        frameCount = 0;
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+        ctx.drawImage(background,0,0);
+        if(index === 5) {
+            index++
+            window.requestAnimationFrame(helper);
+        } 
+        ctx.drawImage(explosion,0,frame[index],98,95,0,0,98,95);
+        ctx.drawImage(explosion,0,frame[index],98,95,120,100,98,95);
+        ctx.drawImage(explosion,0,frame[index],98,95,250,0,98,95);
+        ctx.drawImage(explosion,0,frame[index],98,95,400,40,98,95);
+
+
+        index++;
+        if(index === 40) {
+            index = 0;
+        }
+        window.requestAnimationFrame(helper);
     }
 }
+
