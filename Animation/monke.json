@@ -5,125 +5,146 @@
 			"frame": {
 				"x": 1,
 				"y": 1,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			}
 		},
 		{
 			"filename": "tile001.png",
 			"frame": {
 				"x": 1,
-				"y": 39,
-				"w": 23,
-				"h": 36
+				"y": 88,
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			}
 		},
 		{
 			"filename": "tile002.png",
 			"frame": {
 				"x": 1,
-				"y": 77,
-				"w": 23,
-				"h": 36
+				"y": 175,
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			}
 		},
 		{
 			"filename": "tile003.png",
 			"frame": {
 				"x": 1,
-				"y": 115,
-				"w": 23,
-				"h": 36
+				"y": 262,
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			}
 		},
 		{
 			"filename": "tile004.png",
 			"frame": {
 				"x": 1,
-				"y": 153,
-				"w": 23,
-				"h": 36
+				"y": 349,
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 23,
-				"h": 36
+				"w": 90,
+				"h": 85
 			}
 		},
 		{
 			"filename": "tile005.png",
 			"frame": {
 				"x": 1,
-				"y": 191,
-				"w": 21,
-				"h": 36
+				"y": 436,
+				"w": 90,
+				"h": 85
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 21,
-				"h": 36
+				"w": 90,
+				"h": 85
 			},
 			"sourceSize": {
-				"w": 21,
-				"h": 36
+				"w": 90,
+				"h": 85
+			}
+		},
+		{
+			"filename": "tile006.png",
+			"frame": {
+				"x": 1,
+				"y": 523,
+				"w": 86,
+				"h": 85
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 86,
+				"h": 85
+			},
+			"sourceSize": {
+				"w": 86,
+				"h": 85
 			}
 		}
 	],
@@ -133,8 +154,8 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 25,
-			"h": 228
+			"w": 92,
+			"h": 609
 		},
 		"scale": "1"
 	}
