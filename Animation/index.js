@@ -6,10 +6,10 @@ let frame = 0;
 let frameCount = 0;
 let x = 0;
 
-init();
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
+init();
 
 function init() {
 
@@ -17,18 +17,18 @@ function init() {
 
 }
 function move() {
+    console.log(x, canvas.width);
 
     frameCount++;
     if(frameCount < 8) {
         window.requestAnimationFrame(move);
         return;
     }
-    if(x === canvas.width) {
-        x = -30;
-    }
+    
     if( x === 200) {
         explode();
-    } else {
+    } else if(x < 600){
+    
     frameCount = 0;
     const yPos = 90;
     ctx.clearRect(0,0,canvas.width, canvas.height);
@@ -39,6 +39,9 @@ function move() {
         frame = 0;
     }
     window.requestAnimationFrame(move);
+    } else {
+        x = -30
+        window.requestAnimationFrame(move);
     }
     
 }
@@ -62,11 +65,10 @@ async function explode() {
     
     function helper() {
         frameCount++
-        if(frameCount < 10) {
+        if(frameCount < 5) {
             req = window.requestAnimationFrame(helper);
             return;
         }
-        
         frameCount = 0;
         ctx.clearRect(0,0,canvas.width, canvas.height);
         ctx.drawImage(background,0,0);
