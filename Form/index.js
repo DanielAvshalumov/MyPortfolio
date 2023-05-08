@@ -1,14 +1,14 @@
-
+let total = 0;
 const submitButton = document.getElementById("submit");
 const notes = document.getElementById("notes");
 const donationValue = document.getElementById("donation-value");
-donationValue.innerHTML = "<span>$</span>"+12;
+donationValue.innerHTML = "<span>$</span>"+total;
 
 submitButton.onclick = (e) => {
     e.preventDefault(); 
     const { name, donation, message } = getFormInputs();
     console.log(name,donation);
-
+    total += Number.parseInt(donation);
     const div = document.createElement("div");
     div.append(document.createElement("h3"));
     div.getElementsByTagName("h3")[0].innerHTML = name;
@@ -16,7 +16,9 @@ submitButton.onclick = (e) => {
     div.getElementsByTagName("h4")[0].innerHTML = donation;
     div.append(document.createElement("h5"));
     div.getElementsByTagName("h5")[0].innerHTML = message;
+    div.style = "margin-left:35px";
     notes.append(div);
+    donationValue.innerText = total;
 }
 
 function getFormInputs() {
@@ -31,8 +33,4 @@ function getFormInputs() {
         donation:formTags[1].value,
         message:formTags[2].value
     }      
-}
-
-function getInitialValues() {
-
 }
