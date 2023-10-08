@@ -1,35 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-    <div class="title">
-        <h1>Daniel Avshalumov</h1>
-        <h2>CUNY Brooklyn College - Computer Science Student</h2>
-    </div>
-    <hr/>
-    <div class="projects">
-        <div style="display:flex; flex-direction:column">
-            <h2>Labs</h2>
-            <a href="Labs/JSON_Fruit/lab1.html">JSON Fruit</a>
-            <a href="Labs/Audio/lab2.html">Audio</a>
-            <a href="Labs/Bootstrap/index.html">Bootstrap</a>
-            <a href="Resume/index.html">Resume</a>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
+    <title>ToDo List</title>
+  </head>
+  <body>
+
+    <nav class="m-2 navbar-dark d-flex justify-content-center rounded nav-custom">
+      <h1 class="">Todo List</h1>
+    </nav>
+
+    <div class="d-flex justify-content-around">
+
+      <div class="d-flex flex-column align-items-center">
+        <h2>Create an Inquiry</h2>
+        <div id="card" class="align-items-center rounded card" style="background-color: rgb(0,0,255);">
+          <div class="d-flex align-items-center">
+            <h3 class="card-header mx-auto">// TODO:</h3>
+            <button id="submit-task" class="btn btn-success h-30  mx-5 text-center">Submit</button>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-around align-items-center">
+              <h4 class="card-title">Inquiry</h4>
+              <label for="due-date">Due date</label>
+              <input id="due-date" type="date">
+            </div>
+            <textarea id="inquiry-text" class="card-text" rows="2" cols="30"></textarea>
+          </div>
+          <label for="urgency" class="form-label">Urgency Scale</label>
+          <input type="range" class="form-range" id="urgency" value=0>
         </div>
-        <div style="margin-left:200px; display:flex; flex-direction: column;">
-            <h2>Homework</h2>
-            <a href="Cartoon/index.html" width="200px" height="100px">Cartoon</a>
-            <a href="Animation/index.html">Animation</a>
-            <a href="Form/index.html">Form</a>
-            <a href="DataViz/index.html">Data Visualization</a>
-            <a href="VideoAnimation/index.html">Video Animation</a>
-            <a href="WickMenu/index.html">WickMenu</a>
-        </div>
+      </div>
+
+      <div id="pending-container" class="d-flex flex-column align-items-center">
+        <h2>Pending Tasks</h2>
+      </div>
+
+      <div id="completed" class="d-flex flex-column align-items-center">
+        <h2>Completed Tasks</h2>
+      </div>
+
     </div>
-</body>
+    
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>

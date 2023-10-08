@@ -1,0 +1,2 @@
+This Todo list is for a project manager for an AI company. Its for someone who oversees independant contractors and escalates their issues to middle management. We will include data such as tasker email, and which administrator this issue should be escalated to.
+It will include reversal of actions because sometimes issues are coming from the tasker side is not an issue that we should deal with. Sometimes they correct their inquiry and other times we correct theirs.

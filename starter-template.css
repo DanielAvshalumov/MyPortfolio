@@ -1,0 +1,13 @@
+body {
+  background-image: url("notebook-background.jpg");
+}
+
+.nav-custom {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.nav-custom h1 {
+  padding: 10px;
+  color: #333;
+}
